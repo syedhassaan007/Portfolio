@@ -8,7 +8,6 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
-import Certifications from './pages/Certifications';
 import Journey from './pages/Journey';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -30,7 +29,6 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route path="/certifications" element={<Certifications />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/contact" element={<Contact />} />
 

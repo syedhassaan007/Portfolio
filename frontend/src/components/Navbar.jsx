@@ -7,7 +7,6 @@ const LINKS = [
   { to: '/about', label: 'About' },
   { to: '/skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
-  { to: '/certifications', label: 'Certifications' },
   { to: '/journey', label: 'Education & Experience' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -19,7 +18,7 @@ export default function Navbar() {
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <nav className="glass-panel w-full max-w-5xl px-5 py-3 flex items-center justify-between">
         <NavLink to="/" className="font-display font-semibold text-lg tracking-tight" onClick={() => setOpen(false)}>
-          Syed<span className="text-cyan"> </span>Hassaan
+          Syed<span className="text-cyan">.</span>Hassan
         </NavLink>
 
         <ul className="hidden lg:flex items-center gap-1">
