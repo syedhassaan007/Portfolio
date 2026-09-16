@@ -1,6 +1,8 @@
-// Thin fetch wrapper. In dev, Vite proxies /api to the Express backend
-// (see vite.config.js) so this works with no extra config.
-const BASE_URL = '/api';
+// Thin fetch wrapper. In local dev, Vite proxies /api to the Express backend
+// (see vite.config.js). In production (Netlify), set VITE_API_URL to your
+// deployed backend's URL (e.g. https://your-app.onrender.com) as an
+// environment variable in Netlify's site settings.
+const BASE_URL = `${import.meta.env.VITE_API_URL || ''}/api`;
 
 async function request(path, { method = 'GET', body, auth = false } = {}) {
   const headers = { 'Content-Type': 'application/json' };
