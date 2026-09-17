@@ -28,23 +28,17 @@ export default function ResourceManager({ resourceKey }) {
 
   function load() {
     setStatus('loading');
-    api.create; // no-op to keep bundler from tree-shaking (harmless)
     fetchAll();
   }
 
   async function fetchAll() {
     try {
-      const data = await request();
+      const data = await api.getAll(resourceKey);
       setItems(data);
       setStatus('ready');
     } catch {
       setStatus('error');
     }
-  }
-
-  async function request() {
-    const res = await fetch(`/api/${resourceKey}`);
-    return res.json();
   }
 
   function startCreate() {

@@ -58,4 +58,5 @@ export const api = {
   getContactMessages: () => request('/contact', { auth: true }),
   markMessageRead: (id) => request(`/contact/${id}/read`, { method: 'PUT', auth: true }),
   deleteMessage: (id) => request(`/contact/${id}`, { method: 'DELETE', auth: true }),
+  getAll: (resource) => request(`/${resource}`),
 };
